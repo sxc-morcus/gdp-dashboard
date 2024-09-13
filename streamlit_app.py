@@ -15,3 +15,17 @@ st.markdown('Welcome to my [Streamlit](%s) app!' % url)
 user_input = st.text_input('Enter a custom message:', 'Hello, Streamlit!') 
 # Display the customized message 
 st.write('Customized Message:', user_input)
+
+color = st.select_slider(
+    "Select a color of the rainbow",
+    options=[
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+    ],
+)
+st.write("My favorite color is :(%color)[this]", % color)
