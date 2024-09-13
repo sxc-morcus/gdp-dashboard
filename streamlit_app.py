@@ -28,4 +28,4 @@ color = st.select_slider(
         "violet",
     ],
 )
-st.markdown('My favorite :%s[color] is' % color)
+st.markdown('My favorite color is :%s[▀] %s' % color % color)
