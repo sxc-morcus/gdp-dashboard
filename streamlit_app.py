@@ -10,7 +10,7 @@ url = "https://www.streamlit.io"
 # Set the app title 
 st.title('My First Streamlit App') 
 # Add a welcome message 
-st.markdown('Welcome to my [Streamlit](%s) app!' url) 
+st.markdown('Welcome to my [Streamlit](%s) app!' % url) 
 # Create a text input 
 user_input = st.text_input('Enter a custom message:', 'Hello, Streamlit!') 
 # Display the customized message 
