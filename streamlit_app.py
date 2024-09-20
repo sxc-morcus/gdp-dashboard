@@ -26,6 +26,7 @@ def get_gdp_data():
     DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
     
     raw_gdp_df = pd.read_csv(DATA_FILENAME)
+    f = pd.read_csv(DATA_FILENAME2)
     
 
     MIN_YEAR = 1960
@@ -108,7 +109,7 @@ filtered_gdp_df = gdp_df[
     & (from_year <= gdp_df['Year'])
 ]
 
-
+st.dataframe(f)
 
 st.header('GDP over time', divider='gray')
 
