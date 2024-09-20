@@ -107,7 +107,7 @@ filtered_gdp_df = gdp_df[
     & (from_year <= gdp_df['Year'])
 ]
 
-st.dataframe(raw_d_data)
+st.dataframe(raw_d_df)
 
 st.header('GDP over time', divider='gray')
 
