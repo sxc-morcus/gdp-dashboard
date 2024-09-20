@@ -12,6 +12,8 @@ st.set_page_config(
 # -----------------------------------------------------------------------------
 # Declare some useful functions.
 
+DATA_FILENAME2 = Path(__file__).parent/'data/data.csv'
+
 @st.cache_data
 def get_gdp_data():
     """Grab GDP data from a CSV file.
@@ -22,11 +24,9 @@ def get_gdp_data():
     """
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
-    DATA_FILENAME2 = Path(__file__).parent/'data/data.csv'
     DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
     
     raw_gdp_df = pd.read_csv(DATA_FILENAME)
-    f = pd.read_csv(DATA_FILENAME2)
     
 
     MIN_YEAR = 1960
@@ -62,7 +62,7 @@ def get_gdp_data():
     return gdp_df
 
 gdp_df = get_gdp_data()
-
+f = pd.read_csv(DATA_FILENAME2)
 # -----------------------------------------------------------------------------
 # Draw the actual page
 
